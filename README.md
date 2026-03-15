@@ -1,24 +1,36 @@
 # F1 Card Game — MCP Proxy Server
 
-A lightweight proxy that forwards MCP requests to the hosted [F1 Card Game MCP Server](https://github.com/naman/F1-Card-Game-MCP-Server), so you can play without running the backend locally.
+A lightweight proxy that forwards MCP requests to the hosted [F1 Card Game MCP Server](https://github.com/Naman0701/F1-Card-Game-MCP-Server), so you can play without running the backend locally.
 
 No database, no `.env` secrets, no setup — just add it to your MCP client and start playing.
 
----
+## Cursor Setup
 
-## Prerequisites
+No installation needed — just add this to your `.cursor/mcp.json`:
 
-- Python 3.13+
-- [uv](https://docs.astral.sh/uv/) — install with `pip install uv`
+```json
+{
+  "mcpServers": {
+    "F1 Card Game": {
+      "url": "https://f1-card-game-mcp-server.onrender.com/mcp"
+    }
+  }
+}
+```
 
 ---
 
 ## Claude Desktop Setup
 
+### Prerequisites
+
+- Python 3.13+
+- [uv](https://docs.astral.sh/uv/) — install with `pip install uv`
+
 **1. Clone this repo**
 
 ```bash
-git clone https://github.com/naman/F1-Card-Game-Proxy-MCP-Server.git
+git clone https://github.com/Naman0701/F1-Card-Game-Proxy-MCP-Server.git
 ```
 
 **2. Add to your Claude Desktop config**
@@ -107,5 +119,5 @@ power = average(pace, racecraft, awareness, experience, wet_weather, tire_manage
 
 ## Links
 
-- [F1 Card Game MCP Proxy Server](https://github.com/naman/F1-Card-Game-Proxy-MCP-Server) — this repo
-- [F1 Card Game MCP Server](https://github.com/naman/F1-Card-Game-MCP-Server) — the full backend with game logic, database, and data seeding
+- [F1 Card Game MCP Proxy Server](https://github.com/Naman0701/F1-Card-Game-Proxy-MCP-Server) — this repo
+- [F1 Card Game MCP Server](https://github.com/Naman0701/F1-Card-Game-MCP-Server) — the full backend with game logic, database, and data seeding
